@@ -1,0 +1,118 @@
+#include<stdio.h> 
+#include <ctype.h>
+#include<string.h>
+#define nome 30
+#define size 500
+
+
+
+struct fc_ent{
+	float year; 
+	float month;
+	float day; 
+}inv [size];
+
+struct panes {
+	char codi[13]; 
+	char nom[nome]; 
+	int menudo; 
+	int mayo; 
+	struct fc_ent entraa; 
+} inve[size];
+
+void mostrar (struct panes* pro) {
+	printf ("\n|Codigo producto %s", pro->codi); 
+	printf ("|"); 
+	printf ("\n|Nombre: %s", pro->nom); 
+	printf ("|"); 
+	printf ("\n|Precio individual: %d", pro->menudo); 
+	printf ("|"); 
+	printf ("\n|Precio Mayoreo: %d", pro->mayo); 
+	printf ("|"); 
+	printf ("\n|Dia de llegada: %02f/%02f/%04f", pro->entraa.day, pro->entraa.month, pro->entraa.year);
+		printf ("|"); 
+}
+
+void regis (struct panes *pro) {
+	printf ("\nCodigo: "); 
+	scanf ("%s",& pro->codi);
+	fflush(stdin);
+	
+	printf ("\nNombre ");
+	scanf ("%s", &pro->nom); 
+	fflush(stdin);
+
+	printf ("\nPrecio individual ");
+	scanf ("%d",& pro->menudo); 
+	fflush(stdin);
+
+	printf ("\nPrecio mayoreo: "); 
+	scanf ("%d",&pro->mayo); 
+	fflush(stdin);
+
+	printf ("\nFecha de llegada: "); 
+	scanf ("%02f /%02f/%04f", &pro->entraa.day,
+	&pro->entraa.month, 
+	&pro->entraa.year); 
+	fflush(stdin);	
+}
+
+
+int main () {
+	
+	struct panes harina; 
+	struct panes *pro = &harina; 
+	
+
+
+	int op; 
+	
+printf ("-----------Bienvenido a su inventario de productos-----------"); 
+printf ("\n-----Si desea registrar un producto, presione uno [1]:-----"); 
+printf ("\n-----------Si desea ver un producto, presione uno [2]:-----"); 
+printf ("\n--Si desea eliminar algun producto, presione tres [3]:-----"); 
+printf ("\n--Ingrese su eleccion: ");
+scanf ("%d",&op); 
+	
+	switch (op){
+		
+	case 1: {
+	printf ("Ustede selecciono, registrar un producto: "); 
+	regis(pro);
+	mostrar(pro); 
+		
+		 
+		
+		
+		break;
+	}	
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
