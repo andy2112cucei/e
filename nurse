@@ -1,0 +1,32 @@
+#ifndef __NURSE_H__
+#define __NURSE_H__
+
+#include<string>
+
+class Nurse {
+
+    private:
+    int n;
+    std:: string name;
+    std:: string entrada;
+    std:: string afuera;
+
+    public:
+
+    int getN () const;
+    std::string getName() const;
+    std::string getEntrada() const;
+    std::string getAfuera() const;
+
+    std::string toStrig() const;
+    
+    void setN(const int&);
+    void setName(const std:: string&);
+    void setEntrada(const std:: string&);
+    void setAfuera(const std:: string&);
+
+};
+
+
+
+#endif // __NURSE_H__
