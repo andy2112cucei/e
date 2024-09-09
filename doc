@@ -1,0 +1,29 @@
+#ifndef __DOC_H__
+#define __DOC_H__
+#include <string>
+
+class Doc{
+
+private:
+
+std:: string name;
+std:: string special;
+std:: string cedu;
+
+public:
+
+std::string getName () const ;
+std::string getSpecial() const ;      
+std::string getCedu () const ;
+
+std::string toStrig() const;
+
+void setName(const std:: string&);
+void setSpecial(const std:: string&);
+void setCedu(const std:: string&);
+
+};
+
+
+
+#endif // __DOC_H__
